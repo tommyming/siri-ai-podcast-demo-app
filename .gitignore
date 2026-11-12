@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode user state (personal, machine-specific)
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# Xcode build products
+build/
+DerivedData/
+Build/Products/
+*.moved-aside
+
+# Xcode workspace/user config
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# CocoaPods / Carthage (not used, future-proofing)
+Pods/
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+iOSInjectionProject/
+
+# Temporary files
+*.swp
+*~

@@ -1,0 +1,42 @@
+name: PodcastDemo
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: true
+targets:
+  PodcastDemo:
+    type: application
+    platform: iOS
+    sources:
+      - PodcastDemo
+    settings:
+      base:
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        SWIFT_STRICT_CONCURRENCY: complete
+    info:
+      path: PodcastDemo/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UIBackgroundModes:
+          - audio
+        NSSAppUsesNonExemptEncryption: false
+
+  PodcastDemoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - PodcastDemoUITests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: true
+        SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+    dependencies:
+      - target: PodcastDemo
